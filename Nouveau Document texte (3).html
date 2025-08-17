@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team eSport - One Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0f2c;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,50,0.9);
+      padding: 10px 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #00ff7f; /* couleur du lien actif */
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    section {
+      min-height: 80vh;
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      color: #00bfff;
+      margin: 10px 0;
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      flex: 1 1 200px;
+      max-width: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      background: #1a1a3a;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #00bfff;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0088cc;
+    }
+
+    footer {
+      background: #000820;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,50,0.95);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      h3 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#equipe">Notre équipe</a></li>
+      <li><a href="#histoire">Notre histoire</a></li>
+      <li><a href="#suivre">Pour nous suivre</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#rejoindre">Nous rejoindre</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="accueil">
+  <div style="width:150px; height:150px; margin:10px auto; background:#1a1a3a; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+    <span>Logo ici</span>
+  </div>
+  <h1>Nom de la Team</h1>
+  <p><em>Slogan de la team</em></p>
+</section>
+
+<section id="equipe">
+  <h2>Notre équipe</h2>
+  <h3>Nos joueurs</h3>
+  <div class="team">
+    <div class="card">
+      <img src="" alt="Joueur 1">
+      <h4>Pseudo Joueur 1</h4>
+    </div>
+    <div class="card">
+      <img src="" alt="Joueur 2">
+      <h4>Pseudo Joueur 2</h4>
+    </div>
+  </div>
+
+  <h3 style="margin-top:30px;">Notre staff</h3>
+  <div class="team">
+    <div class="card">
+      <img src="" alt="Staff 1">
+      <h4>Nom Staff 1</h4>
+    </div>
+    <div class="card">
+      <img src="" alt="Staff 2">
+      <h4>Nom Staff 2</h4>
+    </div>
+  </div>
+</section>
+
+<section id="histoire">
+  <h2>Notre histoire</h2>
+  <p>[Texte de l’histoire de la team à compléter]</p>
+</section>
+
+<section id="suivre">
+  <h2>Pour nous suivre</h2>
+  <p>
+    <a href="#" style="color:#00bfff;">Discord</a> |
+    <a href="#" style="color:#00bfff;">Twitch</a> |
+    <a href="#" style="color:#00bfff;">Twitter</a>
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email : <a href="mailto:contact@team.com" style="color:#00bfff;">contact@team.com</a></p>
+  <p>Discord : @VotreDiscord</p>
+</section>
+
+<section id="rejoindre">
+  <h2>Nous rejoindre</h2>
+  <form>
+    <input type="text" placeholder="Votre pseudo" required>
+    <input type="email" placeholder="Votre email" required>
+    <textarea rows="5" placeholder="Présentez-vous..." required></textarea>
+    <button type="submit">Envoyer la candidature</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Votre Team eSport - Tous droits réservés</p>
+</footer>
+
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('section');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      const headerOffset = 70;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      const navUl = document.querySelector('nav ul');
+      if(navUl.classList.contains('active')) {
+        navUl.classList.remove('active');
+      }
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY + 80;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const bottom = top + section.offsetHeight;
+      const id = section.getAttribute('id');
+      const link = document.querySelector(`nav a[href="#${id}"]`);
+
+      if(scrollPos >= top && scrollPos < bottom) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
